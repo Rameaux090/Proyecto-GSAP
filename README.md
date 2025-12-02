@@ -1,8 +1,8 @@
-🚀 Proyecto GSAP - Animaciones Web Avanzadas
-✨ Descripción
+🚀# Proyecto GSAP - Animaciones Web Avanzadas
+✨ #Descripción
 Proyecto de demostración de animaciones web avanzadas utilizando GSAP (GreenSock Animation Platform), la biblioteca de animación más potente para JavaScript. Este proyecto muestra técnicas modernas de animación para crear experiencias web interactivas y atractivas.
 
-🎯 Características Principales
+🎯# Características Principales
 ✅ Animaciones con ScrollTrigger - Efectos sincronizados con el scroll
 
 ✅ Text Reveals - Efectos de revelado de texto profesional
@@ -26,8 +26,6 @@ bash
 # Usando Python (simple)
 python -m http.server 8000
 
-👨‍💻 Autor
-Rameaux
 
 # Usando Node.js con http-server
 npx http-server
@@ -35,3 +33,6 @@ npx http-server
 # O simplemente abrir index.html en el navegador
 Abrir en navegador
 http://localhost:8000
+
+👨‍💻 Autor
+Rameaux
