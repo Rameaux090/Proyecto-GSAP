@@ -1,8 +1,9 @@
-
-*{
+/* ===== ESTILOS ORIGINALES (con ligeras mejoras) ===== */
+* {
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box; /* Añadido para mejor control de tamaños */
 }
 
 body {
@@ -12,12 +13,13 @@ body {
 
 nav {
     width: 100%;
-    background-color:  white;
+    background-color: white;
     box-shadow: 0px -15px 20px rgba(199,199,199,0.7);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+    flex-wrap: wrap; /* Permite que el menú baje en móvil */
 }
 
 .logo {
@@ -28,28 +30,39 @@ nav {
 
 nav ul {
     padding-right: 5rem;
+    display: flex; /* Añadido para alinear los enlaces horizontalmente */
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
 }
 
 nav ul a {
     text-decoration: none;
     margin-right: 1.5rem;
-    color: black
+    color: black;
 }
+
 .boton_reserva {
     background-color: crimson;
-    color:white;
+    color: white;
     padding: 10px 20px;
-    border:none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.boton_reserva:hover {
+    background-color: #b3002d;
 }
 
 header .contenido {
     display: flex;
     justify-content: space-between;
     padding: 0 5rem;
-    margin-top: 5rem;;
+    margin-top: 5rem;
 }
 
-header .contenido .izquierda h1{
+header .contenido .izquierda h1 {
     width: 30%;
     font-size: 7rem;
     color: rgba(0,0,0,0.63);
@@ -58,7 +71,6 @@ header .contenido .izquierda h1{
 header .contenido .derecha {
     width: 50%;
     line-height: 30px;
-
 }
 
 .montaña-imagen {
@@ -67,41 +79,43 @@ header .contenido .derecha {
     background-image: url("./img/mountain.png");
     background-size: contain;
     background-repeat: repeat-x;
-    background-position: center;  
+    background-position: center;
     position: relative;
 }
 
+.montaña-imagen .nube-1,
+.montaña-imagen .nube-2,
+.montaña-imagen .nube-3,
+.montaña-imagen .nube-4 {
+    width: 50%;
+}
 
 .montaña-imagen .nube-1 {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
-    width: 50%;
 }
 
 .montaña-imagen .nube-2 {
     position: absolute;
-    top:18%;
+    top: 18%;
     right: 0;
-    width: 50%;
 }
 
 .montaña-imagen .nube-3 {
     position: absolute;
     top: 35%;
     left: -10%;
-    width: 50%;
 }
 
 .montaña-imagen .nube-4 {
     position: absolute;
-    top:40%;
+    top: 40%;
     right: -10%;
-    width: 50%;
 }
 
 .nube-flotante {
-    width:100%;
+    width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
@@ -112,16 +126,12 @@ header .contenido .derecha {
     position: absolute;
     bottom: 0;
     max-width: 100%;
-    animation: nube-flotante calc(8s * var(--i)) linear infinite
+    animation: nube-flotante calc(8s * var(--i)) linear infinite;
 }
 
 @keyframes nube-flotante {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }
 
 .seccion-2 {
@@ -129,11 +139,13 @@ header .contenido .derecha {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
 }
 
 .seccion-2 .izquierda h1 {
     font-size: 5rem;
 }
+
 .seccion-2 .izquierda h1 span {
     background-color: crimson;
     color: white;
@@ -152,8 +164,9 @@ header .contenido .derecha {
 
 .seccion-2 .derecha .info {
     display: flex;
-    gap:25px;
+    gap: 25px;
     margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
 .seccion-2 .derecha .info label {
@@ -162,8 +175,9 @@ header .contenido .derecha {
 
 .seccion-3 {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* Cambiado de height a min-height */
     position: relative;
+    padding: 2rem;
 }
 
 .nube-flotante2 {
@@ -183,9 +197,10 @@ header .contenido .derecha {
 }
 
 .seccion-3 .contenido {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
 }
 
 .seccion-3 .contenido .izquierda {
@@ -199,8 +214,7 @@ header .contenido .derecha {
 }
 
 .seccion-3 .contenido .derecha {
-    width: 50%;
-    ;
+    width: 50%; /* Eliminado punto y coma extra */
 }
 
 .seccion-3 .contenido .derecha h2 {
@@ -208,36 +222,38 @@ header .contenido .derecha {
     padding: 1rem 0;
 }
 
-.seccion-3 .contenido .derecha p  {
+.seccion-3 .contenido .derecha p {
     line-height: 30px;
     font-size: 1rem;
 }
 
 .seccion-3 .contenido .derecha .categorias {
-    display:flex;
+    display: flex;
     margin-top: 1.5rem;
     gap: 50px;
     text-align: center;
     color: rgb(252,86,86);
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .seccion-3 .opciones {
     background-color: white;
     font-size: 2rem;
     box-shadow: inset -2px -2px 20px rgba(249,178,178,0.5),
-    inset 2px 2px 20px rgba(255,193,193,0.5);
-    padding: .10rem;
-    border-radius: 10px;;
+                inset 2px 2px 20px rgba(255,193,193,0.5);
+    padding: 0.10rem;
+    border-radius: 10px;
 }
 
-.seccion-4  {
+.seccion-4 {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('./img/p13.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: repeat-x;
-    filter:grayscale(.7);
+    filter: grayscale(.7);
     background-attachment: fixed;
     position: relative;
     overflow: hidden;
@@ -251,13 +267,8 @@ header .contenido .derecha {
 }
 
 @keyframes animacion_trek_slide {
-    0% {
-        transform: translateX(150%);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
+    0% { transform: translateX(150%); }
+    100% { transform: translateX(-50%); }
 }
 
 .seccion-4 .nubes img {
@@ -277,20 +288,21 @@ header .contenido .derecha {
 
 .seccion-5 {
     padding: 5rem;
-    background-color: white;;
+    background-color: white;
 }
 
 .seccion-5 .contenido {
     display: flex;
     justify-content: space-between;
+    gap: 2rem;
 }
 
 .seccion-5 .contenido .izquierda h1 {
-   font-size: 3.5rem;
-   padding-top: .2rem;
+    font-size: 3.5rem;
+    padding-top: .2rem;
 }
 
-.seccion-5 .contenido .derecha  {
+.seccion-5 .contenido .derecha {
     width: 50%;
     font-size: .9rem;
 }
@@ -300,10 +312,10 @@ header .contenido .derecha {
     padding-top: 1rem;
 }
 
-.seccion-6  {
+.seccion-6 {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: url('./img/p9.jpg');
     background-position: bottom center;
     background-size: cover;
@@ -317,11 +329,12 @@ header .contenido .derecha {
     align-items: center;
     color: white;
     text-shadow: 0px 5px 15px rgba(77,76,76,0.8);
+    gap: 2rem;
 }
 
 .seccion-7 {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('./img/p5.jpg');
     background-size: cover;
     background-position: top center;
@@ -339,11 +352,11 @@ header .contenido .derecha {
     box-shadow: 0px 5px 15px rgba(77,76,76,0.8);
     background-color: white;
     padding: 2rem;
-    border-radius:  10px;
+    border-radius: 10px;
     margin-right: 5rem;
 }
 
-.seccion-7 .formulario  form {
+.seccion-7 .formulario form {
     width: 95%;
     margin: 1rem auto;
 }
@@ -353,7 +366,7 @@ header .contenido .derecha {
     padding: 15px;
     margin: .5rem 0;
     border-radius: 10px;
-    border: 1px solid gray
+    border: 1px solid gray;
 }
 
 footer {
@@ -362,4 +375,215 @@ footer {
     font-weight: 500;
     font-size: .8rem;
     padding: 2rem 0;
+}
+
+/* ===== MEDIA QUERIES RESPONSIVAS ===== */
+
+/* TABLETS (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .logo {
+        padding-left: 2rem;
+    }
+    nav ul {
+        padding-right: 2rem;
+    }
+    header .contenido {
+        padding: 0 2rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    header .contenido .izquierda h1 {
+        width: 100%;
+        font-size: 5rem;
+    }
+    header .contenido .derecha {
+        width: 80%;
+        margin-top: 1rem;
+    }
+    .seccion-2 {
+        padding: 2rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    .seccion-2 .izquierda h1 {
+        font-size: 3.5rem;
+    }
+    .seccion-2 .derecha {
+        width: 100%;
+    }
+    .seccion-2 .derecha .info {
+        justify-content: center;
+    }
+    .seccion-3 .contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+    .seccion-3 .contenido .izquierda,
+    .seccion-3 .contenido .derecha {
+        width: 100%;
+    }
+    .seccion-3 .contenido .izquierda img {
+        max-width: 80%;
+    }
+    .seccion-4 .titulo {
+        font-size: 6rem;
+        transform: translateY(100%);
+    }
+    .seccion-5 {
+        padding: 2rem;
+    }
+    .seccion-5 .contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+    .seccion-5 .contenido .derecha {
+        width: 100%;
+    }
+    .seccion-6 .contenido {
+        flex-direction: column;
+        padding: 2rem;
+        text-align: center;
+    }
+    .seccion-7 {
+        justify-content: center;
+    }
+    .seccion-7 .formulario {
+        margin-right: 0;
+        width: 80%;
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+}
+
+/* MÓVILES GRANDES (max-width: 768px) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    .logo {
+        padding-left: 0;
+    }
+    nav ul {
+        padding-right: 0;
+        justify-content: center;
+    }
+    nav ul a {
+        margin-right: 0.8rem;
+    }
+    header .contenido {
+        margin-top: 2rem;
+    }
+    header .contenido .izquierda h1 {
+        font-size: 3rem;
+    }
+    header .contenido .derecha {
+        width: 95%;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    .montaña-imagen {
+        height: 70vh;
+        background-size: cover;
+    }
+    .montaña-imagen .nube-1,
+    .montaña-imagen .nube-2,
+    .montaña-imagen .nube-3,
+    .montaña-imagen .nube-4 {
+        width: 70%;
+    }
+    .seccion-2 .izquierda h1 {
+        font-size: 2.5rem;
+    }
+    .seccion-2 .derecha .info label {
+        font-size: 1.2rem;
+    }
+    .seccion-3 .contenido .derecha .categorias {
+        gap: 20px;
+    }
+    .seccion-3 .opciones {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+    .seccion-4 {
+        background-attachment: scroll; /* Mejor rendimiento en móvil */
+    }
+    .seccion-4 .titulo {
+        font-size: 3.5rem;
+        transform: translateY(80%);
+    }
+    .seccion-4 .trek_man {
+        transform: scale(1);
+        bottom: -5%;
+    }
+    .seccion-5 .contenido .izquierda h1 {
+        font-size: 2rem;
+    }
+    .seccion-6 {
+        background-attachment: scroll;
+    }
+    .seccion-6 .contenido {
+        padding: 1.5rem;
+    }
+    .seccion-7 .formulario {
+        width: 90%;
+        padding: 1rem;
+    }
+    .seccion-7 .formulario form input {
+        padding: 10px;
+    }
+    footer {
+        font-size: 0.7rem;
+        padding: 1rem;
+    }
+}
+
+/* MÓVILES PEQUEÑOS (max-width: 480px) */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    nav ul a, .boton_reserva {
+        margin-right: 0;
+    }
+    header .contenido .izquierda h1 {
+        font-size: 2.2rem;
+    }
+    .seccion-2 {
+        padding: 1rem;
+    }
+    .seccion-2 .izquierda h1 {
+        font-size: 2rem;
+    }
+    .seccion-2 .izquierda h1 span {
+        display: inline-block;
+        margin-top: 0.5rem;
+    }
+    .seccion-2 .derecha .info {
+        gap: 15px;
+    }
+    .seccion-2 .derecha .info label {
+        font-size: 1rem;
+    }
+    .seccion-3 .contenido .derecha .categorias {
+        gap: 10px;
+    }
+    .seccion-3 .opciones {
+        font-size: 1.2rem;
+    }
+    .seccion-4 .titulo {
+        font-size: 2.5rem;
+    }
+    .seccion-5 .contenido .izquierda h1 {
+        font-size: 1.8rem;
+    }
+    .seccion-6 .contenido h1 {
+        font-size: 1.5rem;
+    }
+    .seccion-7 .formulario {
+        width: 95%;
+    }
 }
