@@ -1,6 +1,6 @@
 # 🏔️ Hillaira - Landing Page con GSAP
  
-Landing page de una agencia de turismo de montaña ("Hillaira"), desarrollada con HTML, CSS y JavaScript. El proyecto se centra en practicar animaciones ligadas al scroll usando **GSAP** y su plugin **ScrollTrigger**.
+Landing page de una agencia de turismo de montaña ("Hillaira"), desarrollada con HTML, CSS y JavaScript. El proyecto se centra en practicar animaciones ligadas al scroll usando **GSAP** y su plugin **ScrollTrigger**. Puedes verlo aqui https://proyecto-gsap.rmx90-805.workers.dev/
 
 # 🎯 Características Principales
 
