@@ -1,38 +1,47 @@
-🚀# Proyecto GSAP - Animaciones Web Avanzadas
-✨ #Descripción
-Proyecto de demostración de animaciones web avanzadas utilizando GSAP (GreenSock Animation Platform), la biblioteca de animación más potente para JavaScript. Este proyecto muestra técnicas modernas de animación para crear experiencias web interactivas y atractivas.
+# 🏔️ Hillaira - Landing Page con GSAP
+ 
+Landing page de una agencia de turismo de montaña ("Hillaira"), desarrollada con HTML, CSS y JavaScript. El proyecto se centra en practicar animaciones ligadas al scroll usando **GSAP** y su plugin **ScrollTrigger**.
 
-🎯# Características Principales
+# 🎯 Características Principales
+
 ✅ Animaciones con ScrollTrigger - Efectos sincronizados con el scroll
 
 ✅ Text Reveals - Efectos de revelado de texto profesional
 
 ✅ Performance Optimizado - Animaciones fluidas a 60fps
 
-Instalación y Uso
-Requisitos Previos
-bash
-# Node.js (opcional para desarrollo avanzado)
-# Navegador moderno (Chrome, Firefox, Edge, Safari)
-Configuración Local
-Clonar el repositorio
+## 🛠️ Tecnologías
+ 
+- **HTML5** y **CSS3**
+- **JavaScript**
+- **[GSAP](https://gsap.com/)** (GreenSock Animation Platform) y su plugin **ScrollTrigger**, cargados vía CDN (cdnjs)
+- **Font Awesome**, cargado vía CDN
 
-bash
-git clone https://github.com/Rameaux090/Proyecto-GSAP.git
-cd Proyecto-GSAP
-Servidor local (opciones)
+## 📁 Estructura
+ 
+```
+Proyecto GSAP/
+├── index.html      # Estructura y contenido de la página
+├── styles.css       # Estilos y animaciones CSS
+├── script.js         # Animaciones GSAP / ScrollTrigger
+└── img/              # Imágenes e ilustraciones
+```
 
-bash
-# Usando Python (simple)
-python -m http.server 8000
+## 🚀 Instalación y uso
+ 
+No requiere instalación ni dependencias: al usarse GSAP y Font Awesome desde CDN, basta con abrir `index.html` directamente en el navegador.
+ 
+Si prefieres servirlo con un servidor local (recomendado para evitar problemas de rutas), por ejemplo con la extensión Live Server de VS Code, o con Python:
+ 
+```bash
+python3 -m http.server
+```
+ 
+Y abre `http://localhost:8000` en el navegador.
+ 
+## 📄 Licencia
+ 
+Proyecto de uso educativo, realizado para practicar animaciones con GSAP.
 
-
-# Usando Node.js con http-server
-npx http-server
-
-# O simplemente abrir index.html en el navegador
-Abrir en navegador
-http://localhost:8000
-
-👨‍💻 Autor
-Rameaux
+## 👨‍💻 Autor
+[@Rameaux090]
